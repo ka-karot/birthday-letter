@@ -35,6 +35,10 @@ function openEnvelope() {
     document.getElementById("envelope").style.display = "none";
     document.getElementById("letter").classList.remove("hidden");
 
+    const music=document.getElementById("bgMusic");
+    music.volume=0.4;
+    music.play().catch(err=>console.log("Blocked:",err));
+
     
     initCanvas();
     startSparkles();

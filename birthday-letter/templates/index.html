@@ -7,11 +7,12 @@
 </head>
 <body>
     <audio id="bgMusic" loop preload="auto">
-        <source src="/static/music.mp3" type="audio/mpeg">
+        <source src="{{url_for('static',filename='music.mp3')}}" type="audio/mpeg">
     </audio>
 
 
-<div id="envelope">
+<div id="envelope"
+onclick="openEnvelope()">
     <div class="front">
 💌 Tap to open<br>
 Happy Birthday, Angutty 🤍
