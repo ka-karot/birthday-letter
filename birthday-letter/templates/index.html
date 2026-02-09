@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday 💖</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="/static/music.mp3" type="audio/mpeg">
+    </audio>
+
+
+<div id="envelope">
+    <div class="front">
+💌 Tap to open<br>
+Happy Birthday, Angutty 🤍
+</div>
+</div>
+
+<div id="letter" class="hidden">
+    <p id="typedText">
+        Hey Cheese cake ❤️<br><br>
+        Happy Birthday to the person who accidentally became my favorite person.
+        You make my normal days feel special and my bad days survivable.
+        I’m really grateful for you.
+        You make me smile everyday make me feel speacial.
+        And i pray that everyday and year of your life be speacial for you too.
+        I pray that i can celebrate your evry birthday with uh until death do us apart.
+        Let's celebrate your birthday like this every year.
+        And i pray to make your life coloful and joyful.  
+        <br><br>
+        — Yours, always 💕
+    </p>
+
+    <button onclick="showPhotos()">Continue 🎂</button>
+</div>
+
+<div id="gallery" class="hidden">
+    <img id="slideshow" src="{{ url_for('static', filename='images/pic1.jpg') }}" onclick="nextImage()">
+    <p id="caption"></p>
+    <p id="hint" class="hidden">One more tap… 💫</p>
+    
+    <button id="heartBtn" onclick="heartBurst()" disabled>One last thing 💖</button>
+</div>
+
+<div id="heart" class="hidden">💖</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<canvas id="sparkles"></canvas>
+</body>
+</html>
